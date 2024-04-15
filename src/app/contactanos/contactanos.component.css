@@ -1,0 +1,25 @@
+.container-inicio {
+    margin-top: 5%;
+}
+
+.container-columns {
+    margin-top: 25%;
+    padding-left: 5%;
+    margin-bottom: 5%;
+}
+
+.container-column {
+    margin-top: 10%;
+    margin-bottom: 5%;
+    padding-right: 0%;
+}
+
+.buttom {
+    margin-bottom: 10%;
+}
+
+.imagen-logo {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+}
