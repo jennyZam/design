@@ -1,0 +1,19 @@
+.container-columns {
+    padding-left: 0%;
+    margin-bottom: 5%;
+}
+
+.form-control-feedback {
+    position: absolute;
+    padding: 10px;
+    pointer-events: none;
+  }
+  
+  .form-control {
+    padding-left: 30px!important;
+  }
+
+  .boton {
+    background: none;
+    border: none;
+  }
