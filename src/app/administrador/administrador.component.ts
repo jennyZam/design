@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { UsuarioService } from '../usuario.services';
+import { Usuario } from '../usuario.model';
 
 @Component({
   selector: 'app-administrador',
@@ -7,9 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AdministradorComponent implements OnInit {
   
-  constructor() { }
+  usuarios: Usuario[]= []; 
+  constructor(private usuariosServices: UsuarioService) { }
 
   ngOnInit(): void {
+
+    this.usuarios= this.usuariosServices.usuarios;
   }
 
 

@@ -7,3 +7,14 @@
 .nav-link {
     margin-bottom: 60%;
 }
+
+button:hover {
+    background-color: #549b31;
+    cursor: pointer;
+}
+
+a:hover {
+    color: #549b31;
+    font-weight: bold;
+    cursor: pointer;
+}

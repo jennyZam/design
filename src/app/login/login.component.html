@@ -12,12 +12,14 @@
         <div class="row justify-content-center">
             <div class="col-md-6">
                 <h1 class="fw-bold">Inicia Sesion</h1>
-                <form>
+                <form class="py-4"  #f="ngForm" (ngSubmit)="f.form.valid && redirigirUsuario()">
                     <div class="mb-3">
-                        <input type="text" name="usuario" class="form-control" id="usuario" aria-describedby="usuario" placeholder="Ingrese su usuario">
+                        <input type="text" name="usuarioInput" class="form-control" id="usuarioInput" aria-describedby="usuario" placeholder="Ingrese su usuario"
+                        [(ngModel)]="usuarioInput" required="true">
                     </div>
                     <div class="mb-3">
-                        <input type="password" name="password" class="form-control" id="password" placeholder="Ingrese su contraseña">
+                        <input type="password" name="password" class="form-control" id="password" placeholder="Ingrese su contraseña"
+                        [(ngModel)]="passwordInput" required="true">
                     </div>
                     <div class="d-grid gap-2">
                         <button class="btn btn-dark" type="submit">Continuar</button>

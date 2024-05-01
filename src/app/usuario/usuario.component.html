@@ -3,7 +3,7 @@
     <div class="container px-5 text-center container-inicio">
         <div class="row justify-content-center">
             <div class="col-md-6">
-                <h1 class="fw-bold mb-5">Gestiona los usuarios</h1>
+                <h1 class="fw-bold mb-5">Gestiona tus apps</h1>
             </div>
         </div>
     </div>
@@ -14,10 +14,10 @@
                 <ul class="list-group list-group-flush text-start">
                     <li class="list-group-item fw-bold">Menu</li>
                     <br>
-                    <li class="list-group-item fw-bold">Cerrar sesion</li>
-                    <li class="list-group-item fw-bold"><i class="bi bi-house-door"></i> Inicio</li>
-                    <li class="list-group-item fw-bold"><i class="bi bi-search"></i> Buscar</li>
-                    <li class="list-group-item fw-bold"><i class="bi bi-broadcast"></i> Gestiona los usuarios</li>
+                    <li class="list-group-item fw-bold"><a class="texto" routerLink="/">Cerrar sesion</a></li>
+                    <li class="list-group-item fw-bold"><a class="texto" routerLink="/"><i class="bi bi-house-door"></i> Inicio</a></li>
+                    <li class="list-group-item fw-bold"><a class="texto" routerLink="/"><i class="bi bi-search"></i> Buscar</a></li>
+                    <li class="list-group-item fw-bold"><a class="texto" routerLink="/"><i class="bi bi-broadcast"></i> Gestiona las apps</a></li>
                 </ul>
             </div>
             <div class="col md-10 container-column">
@@ -48,13 +48,9 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td>app ver el mundo</td>
-                            <td class="text-center"><button type="submit" class="boton"><i class="bi bi-chevron-double-right"></i></button></td>
-                        </tr>
-                        <tr>
-                            <td>pagina web ver el mundo</td>
-                            <td class="text-center"><button type="submit" class="boton"><i class="bi bi-chevron-double-right"></i></button></td>
+                        <tr *ngFor="let appls of aplicacion">
+                            <td>{{appls.aplicacion}}</td>
+                            <td class="text-center"><button type="submit" class="boton" routerLink="/"><i class="bi bi-chevron-double-right"></i></button></td>
                         </tr>
                     </tbody>
                 </table>

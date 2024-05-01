@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -13,6 +14,8 @@ import { ContactanosComponent } from './contactanos/contactanos.component';
 import { AdministradorComponent } from './administrador/administrador.component';
 import { NosotrosComponent } from './nosotros/nosotros.component';
 import { UsuarioComponent } from './usuario/usuario.component';
+import { UsuarioService } from './usuario.services';
+import { AplicacionService } from './aplicacion.services';
 
 @NgModule({
   declarations: [
@@ -30,9 +33,10 @@ import { UsuarioComponent } from './usuario/usuario.component';
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [UsuarioService, AplicacionService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

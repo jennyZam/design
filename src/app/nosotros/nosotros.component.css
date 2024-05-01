@@ -4,3 +4,8 @@
     object-fit: cover;
     margin-top: 10%;
 }
+
+button:hover {
+    background-color: #549b31;
+    cursor: pointer;
+  }

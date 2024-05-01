@@ -1,4 +1,15 @@
-button:hover {
+  .card-text {
+    text-decoration: none;
+    color: black;
+  }
+
+  a:hover {
+    color: #549b31;
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+  button:hover {
     background-color: #549b31;
     cursor: pointer;
   }

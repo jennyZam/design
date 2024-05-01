@@ -14,10 +14,10 @@
                 <ul class="list-group list-group-flush text-start">
                     <li class="list-group-item fw-bold">Menu</li>
                     <br>
-                    <li class="list-group-item fw-bold">Cerrar sesion</li>
-                    <li class="list-group-item fw-bold"><i class="bi bi-house-door"></i> Inicio</li>
-                    <li class="list-group-item fw-bold"><i class="bi bi-search"></i> Buscar</li>
-                    <li class="list-group-item fw-bold"><i class="bi bi-broadcast"></i> Gestiona los usuarios</li>
+                    <li class="list-group-item fw-bold"><a class="texto" routerLink="/">Cerrar sesion</a></li>
+                    <li class="list-group-item fw-bold"><a class="texto" routerLink="/usuario"><i class="bi bi-house-door"></i> Inicio</a></li>
+                    <li class="list-group-item fw-bold"><a class="texto" routerLink="/usuario"><i class="bi bi-search"></i> Buscar</a></li>
+                    <li class="list-group-item fw-bold"><a class="texto" routerLink="/usuario"><i class="bi bi-broadcast"></i> Gestiona las apps</a></li>
                 </ul>
             </div>
             <div class="col md-10 container-column">
@@ -38,34 +38,57 @@
                     </div>
                 </div>
                 <br>
-        <div class="col-md-10">
-            <div>
-                <table class="table table-hover">
-                    <thead>
-                        <tr>
-                            <th class="col-md-8">Nombres</th>
-                            <th class="col-md-1">Actualizar</th>
-                            <th class="col-md-1">Eliminar</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Administrador</td>
-                            <td class="text-center"><button type="submit" class="boton"><i class="bi bi-check-circle-fill"></i></button></td>
-                            <td class="text-center"><button type="submit" class="boton"><i class="bi bi-x-circle-fill"></i></button></td>
-                        </tr>
-                        <tr>
-                            <td>sky125</td>
-                            <td class="text-center"><button type="submit" class="boton"><i class="bi bi-check-circle-fill"></i></button></td>
-                            <td class="text-center"><button type="submit" class="boton"><i class="bi bi-x-circle-fill"></i></button></td>
-                        </tr>
-                        <tr>
-                            <td>sea692</td>
-                            <td class="text-center"><button type="submit" class="boton"><i class="bi bi-check-circle-fill"></i></button></td>
-                            <td class="text-center"><button type="submit" class="boton"><i class="bi bi-x-circle-fill"></i></button></td>
-                        </tr>
-                    </tbody>
-                </table>
+                <div class="col-md-10">
+                    <div>
+                        <table class="table table-hover">
+                            <thead>
+                                <tr>
+                                    <th class="col-md-8">Nombres</th>
+                                    <th class="col-md-1">Actualizar</th>
+                                    <th class="col-md-1">Eliminar</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let persona of usuarios">
+                                    <td>{{persona.usuario}}</td>
+                                    <td class="text-center"><button type="button" class="boton" data-bs-toggle="modal"
+                                            data-bs-target="#exampleModal"><i class="bi bi-check-circle-fill"></i></button></td>
+                                    <td class="text-center"><button type="button" class="boton" data-bs-toggle="modal"
+                                        data-bs-target="#exampleModals"><i class="bi bi-x-circle-fill"></i></button></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="modal" tabindex="-1" id="exampleModal">
+                            <div class="modal-dialog modal-dialog-centered" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-footer bg-success justify-content-start">
+                                        <div class="col-md-7 bg-light fw-bold px-2 py-3">
+                                            <p>Desea actualizar la información del usuario</p>
+                                        </div>
+                                        <button type="button" class="btn btn-dark">Enviar</button>
+                                        <button type="button" class="btn btn-dark"
+                                            data-bs-dismiss="modal">Cancelar</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="modal" tabindex="-1" id="exampleModals">
+                            <div class="modal-dialog modal-dialog-centered" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-footer bg-success justify-content-start">
+                                        <div class="col-md-7 bg-light fw-bold px-2 py-3">
+                                            <p>Desea eliminar la información del usuario</p>
+                                        </div>
+                                        <button type="button" class="btn btn-dark">Enviar</button>
+                                        <button type="button" class="btn btn-dark"
+                                            data-bs-dismiss="modal">Cancelar</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

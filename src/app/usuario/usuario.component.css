@@ -17,3 +17,14 @@
     background: none;
     border: none;
   }
+
+  .texto {
+    text-decoration: none;
+    color: black;
+  }
+
+  a:hover {
+    color: #549b31;
+    font-weight: bold;
+    cursor: pointer;
+  }
